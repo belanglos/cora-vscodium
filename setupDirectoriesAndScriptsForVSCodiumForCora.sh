@@ -27,9 +27,9 @@ changeAndCopyScripts(){
 	sed -i "s|INSTALLDIR|$INSTALLDIR|g" $INSTALLDIR/startVSCodiumForCora.sh
 	sed -i "s|PARENTDIR|$PARENTDIR|g" $INSTALLDIR/startVSCodiumForCora.sh
 
-	# cp $BASEDIR/startVSCodiumForCoraTempSetup.sh $INSTALLDIR/
-	# sed -i "s|INSTALLDIR|$INSTALLDIR|g" $INSTALLDIR/startVSCodiumForCoraTempSetup.sh
-	# sed -i "s|PARENTDIR|$PARENTDIR|g" $INSTALLDIR/startVSCodiumForCoraTempSetup.sh
+	cp $BASEDIR/startVSCodiumForCoraTempSetup.sh $INSTALLDIR/
+	sed -i "s|INSTALLDIR|$INSTALLDIR|g" $INSTALLDIR/startVSCodiumForCoraTempSetup.sh
+	sed -i "s|PARENTDIR|$PARENTDIR|g" $INSTALLDIR/startVSCodiumForCoraTempSetup.sh
 
 	# cp $BASEDIR/startVSCodiumForCoraNoPorts.sh $INSTALLDIR/
 	# sed -i "s|INSTALLDIR|$INSTALLDIR|g" $INSTALLDIR/startVSCodiumForCoraNoPorts.sh

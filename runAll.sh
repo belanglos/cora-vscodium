@@ -34,5 +34,5 @@ else
 		# docker network create vscodiumForDivaNet
 	fi
 #	./vscodiumForCora/startVSCodiumForCora.sh $USER
-	# ./vscodium202109forcora2/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH
+	./vscodium202109forcora2/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH
 fi

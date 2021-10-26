@@ -24,22 +24,24 @@ RUN dnf clean all && \
     wget \
     git \
     nodejs \
-    npm -y && \
-    dnf clean all
-
-RUN dnf install \
+    npm \
     gtk2 \             
     libXScrnSaver \    
     libsecret \        
     libwayland-server \
     libxkbfile \       
     mesa-libgbm -y &&\
-    dnf clean all 
+    dnf clean all
 
 
 RUN mkdir /home/$user/vscodium
 
-RUN wget https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz | tar zxf - -C /home/$user/vscodium
+#RUN wget -O - https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz | tar zxf - -C /home/$user/vscodium
+
+# RUN wget https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz -O - | tar -xzvf - -C /home/$user/vscodium
+
+RUN wget https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz -O /tmp/vscodium.tar.gz
+RUN tar -xzvf /tmp/vscodium.tar.gz -C /home/$user/vscodium
 
 COPY ./entrypoint.sh /home/$user/
 RUN chmod a+x /home/$user/entrypoint.sh
@@ -49,6 +51,5 @@ RUN touch /home/$user/.gitconfig
 RUN chown $user:$user /home/$user -R
 
 USER $user
-
 
 CMD  /home/$user/entrypoint.sh
