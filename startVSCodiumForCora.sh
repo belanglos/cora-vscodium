@@ -29,7 +29,7 @@ ${CONTAINERRUNTIME} run --rm -ti --privileged  --ipc=host --env="QT_X11_NO_MITSH
  -v /var/run/docker.sock:/var/run/docker.sock\
  -v /tmp/.X11-unix:/tmp/.X11-unix\
  -v INSTALLDIR/workspace:/home/$USER/workspace\
-#  -v INSTALLDIR/vscodium:/home/$USER/vscodium\
+ -v INSTALLDIR/vscodium:/home/$USER/vscodium\
  -v PARENTDIR/m2:/home/$USER/.m2\
  -v PARENTDIR/.gitconfig:/home/$USER/.gitconfig\
  -e user=$USER\

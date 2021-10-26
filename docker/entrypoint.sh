@@ -17,13 +17,8 @@ firstRun(){
 	
 	cd ~/workspace/cora-react-ts-test/
 	npm cache clean --force
-	npm install
+	#npm install
     
-}
-
-runInstaller(){
-	#SWT_GTK3=0  ~/vscodium-installer/vscodium-inst
-	~/vscodium-installer/vscodium-inst
 }
 
 if [ ! -d ~/workspace/cora-jsclient ]; then
