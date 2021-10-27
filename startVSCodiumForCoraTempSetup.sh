@@ -4,7 +4,7 @@
 USER=$(id -u -n)
 BASEDIR=$(dirname $BASH_SOURCE)
 VSCODIUMBRANCH=$2
-RECOMMENDEDSETUP=${3:-false}
+RECOMMENDEDSETUP=$3
 
 echo 
 echo "running startEclipseForCoraTempSetup.sh..."

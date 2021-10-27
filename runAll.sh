@@ -5,6 +5,7 @@ USERID=$(id -u)
 DOCKERGROUPID=$1
 VSCODIUMBRANCH=$2
 NOCACHE=$3
+RECOMMENDEDSETUP=${4:-false}
 
 if [ ! $VSCODIUMBRANCH ]; then
 	VSCODIUMBRANCH='master'
@@ -17,6 +18,7 @@ echo userName: $USER
 echo userId: $USERID
 echo dockerGroupId: $DOCKERGROUPID
 echo cora-vscodium branch: $VSCODIUMBRANCH
+echo recommended setup: $RECOMMENDEDSETUP
 
 
 if [ ! $USER ]; then
@@ -34,5 +36,5 @@ else
 		# docker network create vscodiumForDivaNet
 	fi
 #	./vscodiumForCora/startVSCodiumForCora.sh $USER
-	./vscodium1_61_2forcora4/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH
+	./vscodium1_61_2forcora4/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH $RECOMMENDEDSETUP
 fi
