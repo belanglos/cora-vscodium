@@ -12,8 +12,8 @@ firstRun(){
 		cd ~
 	fi
 
-	echo "Installing VSCodium";
-	installVSCodium();
+	echo "Installing VSCodium"
+	installVSCodium
 		
 	chmod +x ~/workspace/cora-vscodium/development/setupProjects.sh
 	~/workspace/cora-vscodium/development/setupProjects.sh ~/workspace
