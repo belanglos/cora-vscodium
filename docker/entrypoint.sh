@@ -34,7 +34,7 @@ installVSCodium(){
 	echo "Starting VSCodium for the first time to create folder structure in data."
 	~/vscodium/vscodiumforcora/codium
 
-	mv ~/data/settings.json ~/vscodium/vscodiumforcora/codium/data/user-data/User
+	mv ~/data/settings.json ~/vscodium/vscodiumforcora/data/user-data/User
 
 	installExtensions
 
@@ -45,7 +45,7 @@ installVSCodium(){
 installExtensions(){
 	wget -O /tmp/vscode-eslint.vsix https://github.com/microsoft/vscode-eslint/releases/download/insider%2F2.1.20/vscode-eslint-2.1.20.vsix
 	unzip -d /tmp/vscode-eslint /tmp/vscode-eslint.vsix
-	mv /tmp/vscode-eslint/extension ~/vscodium/vscodiumforcora/codium/data/extensions/dbaeumer.vscode-eslint-2.1.20
+	mv /tmp/vscode-eslint/extension ~/vscodium/vscodiumforcora/data/extensions/dbaeumer.vscode-eslint-2.1.20
 }
 
 if [ ! -d ~/workspace/cora-jsclient ]; then
