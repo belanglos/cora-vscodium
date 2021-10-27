@@ -4,12 +4,14 @@
 USER=$(id -u -n)
 BASEDIR=$(dirname $BASH_SOURCE)
 VSCODIUMBRANCH=$2
+RECOMMENDEDSETUP=${3:-false}
 
 echo 
 echo "running startEclipseForCoraTempSetup.sh..."
 echo starting vscodium using:
 echo userName: $USER
 echo cora-vscodium branch: $VSCODIUMBRANCH
+echo recommended setup: $RECOMMENDEDSETUP
 echo 
 echo "Testing for container runtimes...."
 CONTAINERRUNTIME=podman;
@@ -21,9 +23,9 @@ fi
 echo "Container runtime will be "${CONTAINERRUNTIME}
 
 if [ ! $USER ]; then
-  	echo "You must specify the userName used when starting vscodium1_61_2forcora3TempSetup"
+  	echo "You must specify the userName used when starting vscodium1_61_2forcora4TempSetup"
 else
-cd vscodium1_61_2forcora3
+cd vscodium1_61_2forcora4
 #${CONTAINERRUNTIME} run --rm -ti --privileged --net=host --ipc=host --env="QT_X11_NO_MITSHM=1"  -e DISPLAY=$DISPLAY \
 ${CONTAINERRUNTIME} run --rm -ti --privileged --ipc=host --env="QT_X11_NO_MITSHM=1"  -e DISPLAY=$DISPLAY \
  -v /var/run/docker.sock:/var/run/docker.sock\
@@ -33,7 +35,8 @@ ${CONTAINERRUNTIME} run --rm -ti --privileged --ipc=host --env="QT_X11_NO_MITSHM
  -v PARENTDIR/m2:/home/$USER/.m2\
  -e user=$USER\
  -e vscodiumbranch=$VSCODIUMBRANCH\
- --name vscodium1_61_2forcora3TempSetup\
- vscodium1_61_2forcora3
+ -e RECOMMENDEDSETUP=$RECOMMENDEDSETUP\
+ --name vscodium1_61_2forcora4TempSetup\
+ vscodium1_61_2forcora4
  cd ../
 fi
