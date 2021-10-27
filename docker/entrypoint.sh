@@ -20,7 +20,7 @@ firstRun(){
 	
 	cd ~/workspace/cora-react-ts-test/
 	npm cache clean --force
-	#npm install
+	npm install
     
 }
 
