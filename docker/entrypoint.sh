@@ -36,11 +36,11 @@ installVSCodium(){
 
 	mv ~/data/settings.json ~/vscodium/vscodiumforcora/data/user-data/User
 
-	rm -rf ~/data
+	rm ~/data/settings.json
 
 	installExtensions
 
-	cp -r ~/vscodium/vscodiumforcora/data ~/untouchedData
+	cp -r ~/vscodium/vscodiumforcora/data ~/data/
 
 }
 
