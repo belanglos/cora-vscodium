@@ -6,7 +6,7 @@ echo "Running setupDirectoriesAndScriptsForVSCodiumForCora..."
 SCRIPT=$(readlink -f "$0")
 BASEDIR=$(dirname $SCRIPT)
 PARENTDIR="$(dirname "$BASEDIR")"
-INSTALLDIR=$PARENTDIR/vscodium202109forcora2
+INSTALLDIR=$PARENTDIR/vscodium1_61_2forcora3
 TOPDIR="$(dirname "$PARENTDIR")"
 
 echo 

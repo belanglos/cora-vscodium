@@ -19,10 +19,10 @@ fi
 echo "Container runtime will be "${CONTAINERRUNTIME}
 
 if [ ! $USER ]; then
-  	echo "You must specify the userName used when starting vscodium202109forcora2"
+  	echo "You must specify the userName used when starting vscodium1_61_2forcora3"
 else
 	#${CONTAINERRUNTIME} run --rm -ti --privileged --ipc=host --env="QT_X11_NO_MITSHM=1"  -e DISPLAY=$DISPLAY \
-cd vscodium202109forcora2
+cd vscodium1_61_2forcora3
 #docker-compose run -e DISPLAY=$DISPLAY\
 #${CONTAINERRUNTIME} run --rm -ti --privileged --net=host --ipc=host --env="QT_X11_NO_MITSHM=1"  -e DISPLAY=$DISPLAY \
 ${CONTAINERRUNTIME} run --rm -ti --privileged  --ipc=host --env="QT_X11_NO_MITSHM=1"  -e DISPLAY=$DISPLAY \
@@ -34,8 +34,8 @@ ${CONTAINERRUNTIME} run --rm -ti --privileged  --ipc=host --env="QT_X11_NO_MITSH
  -v PARENTDIR/.gitconfig:/home/$USER/.gitconfig\
  -e user=$USER\
  -e HOSTBASEDIR=$BASEDIR\
- --name vscodium202109forcora2\
- vscodium202109forcora2 $2
+ --name vscodium1_61_2forcora3\
+ vscodium1_61_2forcora3 $2
  cd ../
 fi
 

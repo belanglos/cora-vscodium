@@ -21,9 +21,9 @@ fi
 echo "Container runtime will be "${CONTAINERRUNTIME}
 
 if [ ! $USER ]; then
-  	echo "You must specify the userName used when starting vscodium202109forcora2TempSetup"
+  	echo "You must specify the userName used when starting vscodium1_61_2forcora3TempSetup"
 else
-cd vscodium202109forcora2
+cd vscodium1_61_2forcora3
 #${CONTAINERRUNTIME} run --rm -ti --privileged --net=host --ipc=host --env="QT_X11_NO_MITSHM=1"  -e DISPLAY=$DISPLAY \
 ${CONTAINERRUNTIME} run --rm -ti --privileged --ipc=host --env="QT_X11_NO_MITSHM=1"  -e DISPLAY=$DISPLAY \
  -v /var/run/docker.sock:/var/run/docker.sock\
@@ -33,7 +33,7 @@ ${CONTAINERRUNTIME} run --rm -ti --privileged --ipc=host --env="QT_X11_NO_MITSHM
  -v PARENTDIR/m2:/home/$USER/.m2\
  -e user=$USER\
  -e vscodiumbranch=$VSCODIUMBRANCH\
- --name vscodium202109forcora2TempSetup\
- vscodium202109forcora2
+ --name vscodium1_61_2forcora3TempSetup\
+ vscodium1_61_2forcora3
  cd ../
 fi
