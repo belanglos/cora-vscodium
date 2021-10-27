@@ -40,8 +40,8 @@ installVSCodium(){
 
 	installExtensions
 
-	#dbaeumer.vscode-eslint-2.1.20
-	#esbenp.prettier-vscode-9.0.0
+	cp -r ~/vscodium/vscodiumforcora/data ~/untouchedData
+
 }
 
 installExtensions(){
@@ -59,6 +59,5 @@ if [ ! -d ~/workspace/cora-jsclient ]; then
 elif [ ! -d ~/vscodium/vscodiumforcora ]; then
 	runInstaller
 else
-	# ~/vscodium/vscodiumforcora/vscodium
-    echo "END!"
+	~/vscodium/vscodiumforcora/codium
 fi
