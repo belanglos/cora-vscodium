@@ -11,6 +11,9 @@ firstRun(){
 		git checkout $VSCODIUMBRANCH
 		cd ~
 	fi
+
+	echo "Installing VSCodium";
+	installVSCodium();
 		
 	chmod +x ~/workspace/cora-vscodium/development/setupProjects.sh
 	~/workspace/cora-vscodium/development/setupProjects.sh ~/workspace
@@ -19,6 +22,11 @@ firstRun(){
 	npm cache clean --force
 	#npm install
     
+}
+
+installVSCodium(){
+	echo "Installing VSCodium...";
+	wget -O - https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz | tar zxf - -C ~/vscodium/vscodiumforcora
 }
 
 if [ ! -d ~/workspace/cora-jsclient ]; then
