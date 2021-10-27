@@ -36,6 +36,8 @@ installVSCodium(){
 
 	mv ~/data/settings.json ~/vscodium/vscodiumforcora/data/user-data/User
 
+	rm -rf ~/data
+
 	installExtensions
 
 	#dbaeumer.vscode-eslint-2.1.20
@@ -46,6 +48,10 @@ installExtensions(){
 	wget -O /tmp/vscode-eslint.vsix https://github.com/microsoft/vscode-eslint/releases/download/insider%2F2.1.20/vscode-eslint-2.1.20.vsix
 	unzip -d /tmp/vscode-eslint /tmp/vscode-eslint.vsix
 	mv /tmp/vscode-eslint/extension ~/vscodium/vscodiumforcora/data/extensions/dbaeumer.vscode-eslint-2.1.20
+
+	wget -O /tmp/prettier-vscode.vsix https://github.com/prettier/prettier-vscode/releases/download/v9.0.0/prettier-vscode-9.0.0.vsix
+	unzip -d /tmp/prettier-vscode /tmp/prettier-vscode.vsix
+	mv /tmp/prettier-vscode/extension ~/vscodium/vscodiumforcora/data/extensions/esbenp.prettier-vscode-9.0.0
 }
 
 if [ ! -d ~/workspace/cora-jsclient ]; then
