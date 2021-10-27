@@ -54,10 +54,8 @@ installExtensions(){
 	mv /tmp/prettier-vscode/extension ~/vscodium/vscodiumforcora/data/extensions/esbenp.prettier-vscode-9.0.0
 }
 
-if [ ! -d ~/workspace/cora-jsclient ]; then
+if [ ! -d ~/workspace/cora-vscodium ]; then
   	firstRun
-elif [ ! -d ~/vscodium/vscodiumforcora ]; then
-	runInstaller
 else
 	~/vscodium/vscodiumforcora/codium
 fi
