@@ -21,6 +21,7 @@ RUN dnf clean all && \
     dnf install \
     glibc-langpack-en \
     mozilla-fira-mono-fonts \
+    fira-code-fonts \
     unzip \
     vim \
     firefox \
