@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "prettier.configPath": ".prettierrc.json",
+    "prettier.prettierPath": "node_modules/prettier/",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true
+  }
+  

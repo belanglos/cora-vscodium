@@ -19,6 +19,9 @@ RUN groupadd -r docker -g$dockergroupid && useradd -d "/home/$user" -u $userid -
 
 RUN dnf clean all && \
     dnf install \
+    glibc-langpack-en \
+    mozilla-fira-mono-fonts \
+    unzip \
     vim \
     firefox \
     wget \
@@ -35,6 +38,7 @@ RUN dnf clean all && \
 
 
 RUN mkdir /home/$user/vscodium
+RUN mkdir /home/$user/data
 
 #RUN wget -O - https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz | tar zxf - -C /home/$user/vscodium
 
@@ -43,6 +47,7 @@ RUN mkdir /home/$user/vscodium
 #RUN wget https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz -O /tmp/vscodium.tar.gz
 #RUN tar -xzvf /tmp/vscodium.tar.gz -C /home/$user/vscodium/vscodiumforcora
 
+COPY ./settings.json /home/$user/data/
 COPY ./entrypoint.sh /home/$user/
 RUN chmod a+x /home/$user/entrypoint.sh
 

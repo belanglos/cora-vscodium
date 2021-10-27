@@ -28,6 +28,24 @@ installVSCodium(){
 	echo "Installing VSCodium...";
 	mkdir ~/vscodium/vscodiumforcora
 	wget -O - https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz | tar zxf - -C ~/vscodium/vscodiumforcora
+
+	mkdir ~/vscodium/vscodiumforcora/data
+
+	echo "Starting VSCodium for the first time to create folder structure in data."
+	~/vscodium/vscodiumforcora/codium
+
+	mv ~/data/settings.json ~/vscodium/vscodiumforcora/codium/data/user-data/User
+
+	installExtensions
+
+	#dbaeumer.vscode-eslint-2.1.20
+	#esbenp.prettier-vscode-9.0.0
+}
+
+installExtensions(){
+	wget -O /tmp/vscode-eslint.vsix https://github.com/microsoft/vscode-eslint/releases/download/insider%2F2.1.20/vscode-eslint-2.1.20.vsix
+	unzip -d /tmp/vscode-eslint /tmp/vscode-eslint.vsix
+	mv /tmp/vscode-eslint/extension ~/vscodium/vscodiumforcora/codium/data/extensions/dbaeumer.vscode-eslint-2.1.20
 }
 
 if [ ! -d ~/workspace/cora-jsclient ]; then
