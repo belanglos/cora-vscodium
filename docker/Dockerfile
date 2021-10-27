@@ -35,7 +35,6 @@ RUN dnf clean all && \
 
 
 RUN mkdir /home/$user/vscodium
-RUN mkdir /home/$user/vscodium/vscodiumforcora
 
 #RUN wget -O - https://github.com/VSCodium/vscodium/releases/download/1.61.2/VSCodium-linux-x64-1.61.2.tar.gz | tar zxf - -C /home/$user/vscodium
 
