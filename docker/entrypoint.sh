@@ -20,7 +20,7 @@ firstRun(){
 	
 	cd ~/workspace/cora-react-ts-test/
 	npm cache clean --force
-	npm install
+	#npm install
     
 }
 
@@ -34,13 +34,21 @@ installVSCodium(){
 	echo "Starting VSCodium for the first time to create folder structure in data."
 	~/vscodium/vscodiumforcora/codium
 
+	echo "Moving settings.json"
 	mv ~/data/settings.json ~/vscodium/vscodiumforcora/data/user-data/User
 
+	ls ~/
+	ls ~/data
+
+	echo "Removing settings.json" 
 	rm ~/data/settings.json
 
+	echo "Installing extensions"
 	installExtensions
 
+	echo "Copying data"
 	cp -r ~/vscodium/vscodiumforcora/data ~/data/
+	echo "Done copying data"
 
 }
 
