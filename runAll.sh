@@ -22,13 +22,13 @@ echo recommended setup: $RECOMMENDEDSETUP
 
 
 if [ ! $USER ]; then
-  	echo you must specify the userName to be used when building vscodium1_61_2forcora4
+  	echo you must specify the userName to be used when building vscodium1_62_3forcora1
 elif [ ! $USERID ]; then
-	echo you must specify the userid to be used when building vscodium1_61_2forcora4, use: id -u youruserid 
+	echo you must specify the userid to be used when building vscodium1_62_3forcora1, use: id -u youruserid 
 elif [ ! $DOCKERGROUPID ] && [ ! -d ./vscodiumForCora ]; then
-	echo you must specify the dockergroupid to be used when building vscodium1_61_2forcora4, use: getent group docker 
+	echo you must specify the dockergroupid to be used when building vscodium1_62_3forcora1, use: getent group docker 
 else
-	if [ ! -d ./vscodium1_61_2forcora4 ]; then
+	if [ ! -d ./vscodium1_62_3forcora1 ]; then
 		./cora-vscodium/buildVSCodiumForCora.sh $USER $USERID $DOCKERGROUPID $NOCACHE
 		./cora-vscodium/setupDirectoriesAndScriptsForVSCodiumForCora.sh
 		# docker network create vscodiumForCoraNet
@@ -36,5 +36,5 @@ else
 		# docker network create vscodiumForDivaNet
 	fi
 #	./vscodiumForCora/startVSCodiumForCora.sh $USER
-	./vscodium1_61_2forcora4/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH $RECOMMENDEDSETUP
+	./vscodium1_62_3forcora1/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH $RECOMMENDEDSETUP
 fi
