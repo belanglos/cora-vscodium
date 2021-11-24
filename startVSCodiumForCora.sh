@@ -35,6 +35,7 @@ ${CONTAINERRUNTIME} run --rm -ti --privileged  --ipc=host --env="QT_X11_NO_MITSH
  -v PARENTDIR/.git-credentials:/home/$USER/.git-credentials\
  -e user=$USER\
  -e HOSTBASEDIR=$BASEDIR\
+ -p 33001:3000\
  --name vscodium1_62_3forcora1\
  vscodium1_62_3forcora1 $2
  cd ../
