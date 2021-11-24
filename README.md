@@ -5,4 +5,4 @@ cora-vscodium/runAll.sh dockerid master nocache recommendedSetup
 e.g.
 
 first installation:
-cora-vscodium/runAll.sh 999 master nocache true
+./cora-vscodium/runAll.sh <your-docker-id> master nocache true
