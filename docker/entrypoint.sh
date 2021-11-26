@@ -55,9 +55,9 @@ setupWithRecommendedData(){
 
 installExtensions(){
 	echo "Installing recommended extensions"
-	wget -O /tmp/vscode-eslint.vsix https://github.com/microsoft/vscode-eslint/releases/download/insider%2F2.1.20/vscode-eslint-2.1.20.vsix
+	wget -O /tmp/vscode-eslint.vsix https://github.com/microsoft/vscode-eslint/releases/download/release%2F2.2.20-Insider/vscode-eslint-2.2.0.vsix
 	unzip -d /tmp/vscode-eslint /tmp/vscode-eslint.vsix
-	mv /tmp/vscode-eslint/extension ~/vscodium/vscodiumforcora/data/extensions/dbaeumer.vscode-eslint-2.1.20
+	mv /tmp/vscode-eslint/extension ~/vscodium/vscodiumforcora/data/extensions/dbaeumer.vscode-eslint-2.2.0
 
 	wget -O /tmp/prettier-vscode.vsix https://github.com/prettier/prettier-vscode/releases/download/v9.0.0/prettier-vscode-9.0.0.vsix
 	unzip -d /tmp/prettier-vscode /tmp/prettier-vscode.vsix
