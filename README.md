@@ -1,15 +1,24 @@
 chmod +x runAll.sh
 
-cora-vscodium/runAll.sh dockerid master nocache recommendedSetup
+Recommended folder structure:
+```
+parentFolder/
+|- cora-vscodium/
+|- 
+``` 
 
-e.g.
-
-first installation:
-
-./cora-vscodium/runAll.sh <your-docker-id> master nocache true
+`cora-vscodium/runAll.sh <your-dockerid> master nocache <recommendedSetup>`
 
 
-into your parent folder, put a .gitconfig file with content:
+# First installation:
+
+`./cora-vscodium/runAll.sh <your-docker-id> master nocache true`
+
+- When VSCodium starts for the first time, close it, the startup is needed to create the correct folder structure
+- When you're asked to choose remote, choose 6
+
+
+into your parentFolder, put a .gitconfig file with content:
 
 ```
 [credential]
