@@ -14,7 +14,7 @@ updateOrCreateEnv(){
 	echo $FILE
 
 	if [ ! -f "${FILE}" ]; then
-			echo "$FILENAME does not exist in $PARENTDIR"§
+			echo "$FILENAME does not exist in $PARENTDIR"
 			touch "${FILE}"
 			echo "CURRENTVERSION=$INSTALLVERSION" > ${FILE}
 	else
@@ -37,7 +37,7 @@ createStartScriptIfNotExists(){
 }
 
 setupStartScriptInParentFolder(){
-	echo "Setting up start script in PARENTDIR folder"
+	echo "Setting up start script in $PARENTDIR folder"
 	updateOrCreateEnv
 	createStartScriptIfNotExists
 }
