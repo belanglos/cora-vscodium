@@ -54,47 +54,9 @@ createGitConfigFile(){
 	touch $PARENTDIR/.gitconfig
 }
 
-updateOrCreateEnv(){
-	local PARENT="$1"
-	local FILENAME=env.sh
-	local FILE=${PARENT}/${FILENAME}
-	echo $FILE
-
-	if [ ! -f "${FILE}" ]; then
-			echo "$FILENAME does not exist in $PARENT"
-			touch "${FILE}"
-			echo "CURRENTVERSION=$INSTALLVERSION" > ${FILE}
-	else
-			echo "$FILE exists."
-			. $FILE
-			echo "Current version: $CURRENTVERSION, updating to $INSTALLVERSION"
-			sed -i "s/$CURRENTVERSION/$INSTALLVERSION/g" $FILE
-	fi
-}
-
-createStartScriptIfNotExists(){
-    local PARENT="$1"
-	local FILENAME=startCurrentVSCodiumForCora.sh
-	local FILE=${PARENT}/${FILENAME}
-
-    if [ ! -f "${FILE}" ]; then
-        echo "$FILENAME does not exist in $PARENT"
-        cp $BASEDIR/$FILENAME $PARENT/
-        chmod +x ${FILE}
-	fi
-}
-
-setupStartScriptInParentFolder(){
-	echo "Setting up start script in parent folder"
-	updateOrCreateEnv $PARENTDIR
-	createStartScriptIfNotExists $PARENTDIR
-
-}
-
 if [ ! -d $INSTALLDIR ]; then
 	createDirectories
 	changeAndCopyScripts
 	createGitConfigFile
 fi
 
-setupStartScriptInParentFolder

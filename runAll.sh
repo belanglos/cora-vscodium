@@ -36,11 +36,6 @@ else
 	fi
 #	./vscodiumForCora/startVSCodiumForCora.sh $USER
 	./vscodium1_62_3forcora3/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH $RECOMMENDEDSETUP
-	echo "NOW ITS FINISHED!!"
-	if ! $RECOMMENDEDSETUP; then
-		TARGET=$INSTALLDIR/vscodium/vscodiumforcora/
-		. $PARENTDIR/env.sh
-		echo Copying files from $CURRENTVERSION to $TARGET
-    	cp -r ../$CURRENTVERSION/vscodium/vscodiumforcora/data $TARGET
-	fi
+	echo "NOW ITS FINISHED, running postInstaller!!"
+	./vscodium1_61_2forcora3/postInstaller.sh $RECOMMENDEDSETUP
 fi
