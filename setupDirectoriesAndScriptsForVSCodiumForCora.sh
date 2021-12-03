@@ -33,7 +33,7 @@ changeAndCopyScripts(){
 	sed -i "s|PARENTDIR|$PARENTDIR|g" $INSTALLDIR/startVSCodiumForCoraTempSetup.sh
 
 	cp $BASEDIR/postInstaller.sh $INSTALLDIR/
-	chmod +x $INSTALLDIR/postInstaller
+	chmod +x $INSTALLDIR/postInstaller.sh
 
 	# cp $BASEDIR/startVSCodiumForCoraNoPorts.sh $INSTALLDIR/
 	# sed -i "s|INSTALLDIR|$INSTALLDIR|g" $INSTALLDIR/startVSCodiumForCoraNoPorts.sh
