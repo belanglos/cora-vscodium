@@ -26,14 +26,8 @@ parentDir
 - Go through the "Get Started with VS Code" sections, or just choose your color theme and "Mark Done"
 - "Open Folder" `workspace/cora-react-client`
 - If asked "Do you trust the authors of the files in this folder?" you can confirm if you want, check the checkbox if you plan to only clone repos into workspace that you trust
-- Open example.env and follow the notes there
+- Follow the steps in https://github.com/lsu-ub-uu/cora-react-client/
 
-# NPM scripts
-
-The scripts that you will probably need the most are:
-- `npm start` starts the development server at http://localhost:33001/
-- `npm test` runs (and watches) the tests
-- `npm run coverage` runs coverage and opens report in firefox 
 
 # To be able to push to Github
 
