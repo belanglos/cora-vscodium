@@ -6,9 +6,12 @@ DOCKERGROUPID=$1
 RECOMMENDEDSETUP=${2:-false}
 VSCODIUMBRANCH=${3:-'master'}
 NOCACHE=$4
+PARENTDIR="$(dirname "$BASEDIR")"
+INSTALLVERSION=vscodium1_62_3forcora3
+INSTALLDIR=$PARENTDIR/$INSTALLVERSION
 
 echo 
-echo "running runAll.sh..."
+echo starting install of $INSTALLVERSION
 echo running all using:
 echo userName: $USER
 echo userId: $USERID
@@ -34,4 +37,10 @@ else
 #	./vscodiumForCora/startVSCodiumForCora.sh $USER
 	./vscodium1_62_3forcora3/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH $RECOMMENDEDSETUP
 	echo "NOW ITS FINISHED!!"
+	if ! $RECOMMENDEDSETUP; then
+		TARGET=$INSTALLDIR/vscodium/vscodiumforcora/
+		. $PARENTDIR/env.sh
+		echo Copying files from $CURRENTVERSION to $TARGET
+    	cp -r ../$CURRENTVERSION/vscodium/vscodiumforcora/data $TARGET
+	fi
 fi
