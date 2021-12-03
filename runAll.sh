@@ -37,5 +37,6 @@ else
 #	./vscodiumForCora/startVSCodiumForCora.sh $USER
 	./vscodium1_62_3forcora3/startVSCodiumForCoraTempSetup.sh $USER $VSCODIUMBRANCH $RECOMMENDEDSETUP
 	echo "NOW ITS FINISHED, running postInstaller!!"
+	chmod +x ./cora-vscodium/postInstaller.sh
 	./cora-vscodium/postInstaller.sh $RECOMMENDEDSETUP
 fi
