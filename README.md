@@ -7,12 +7,12 @@
 
 
 # First installation:
-- After the steps above
-- cd into the parentDir
-- Have your dockerId ready, to get it run `getent group docker`
-- run `./cora-vscodium/runAll.sh <your-docker-id> true`, replace `<your-docker-id>` with your docker id.
-- When VSCodium starts for the first time, just close it and let the install continue, the startup is needed to create the correct folder structure
-- When the installation is done you should see the following files/directories:
+After the steps above
+1. cd into the parentDir
+2. Have your dockerId ready, to get it run `getent group docker`
+3. run `./cora-vscodium/runAll.sh <your-docker-id> true`, replace `<your-docker-id>` with your docker id.
+4. When VSCodium starts for the first time, just close it and let the install continue, the startup is needed to create the correct folder structure
+5. When the installation is done you should see the following files/directories:
 
 ```
 parentDir
@@ -21,12 +21,12 @@ parentDir
 |- env.sh
 |- startCurrentVSCodiumForCora.sh
 ```
-
-- To start, run `startCurrentVSCodiumForCora.sh` from your parentDir.
-- Go through the "Get Started with VS Code" sections, or just choose your color theme and "Mark Done"
-- "Open Folder" `workspace/cora-react-client`
-- If asked "Do you trust the authors of the files in this folder?" you can confirm if you want, check the checkbox if you plan to only clone repos into workspace that you trust
-- Follow the steps in https://github.com/lsu-ub-uu/cora-react-client/
+#
+1. To start, run `./startCurrentVSCodiumForCora.sh` from your parentDir.
+2. Go through the "Get Started with VS Code" sections, or just choose your color theme and "Mark Done"
+3. "Open Folder" `workspace/cora-react-client`
+4. If asked "Do you trust the authors of the files in this folder?" you can confirm if you want, check the checkbox if you plan to only clone repos into workspace that you trust
+5. Follow the steps in https://github.com/lsu-ub-uu/cora-react-client/ "To get started", skip step 1.
 
 
 # To be able to push to Github
