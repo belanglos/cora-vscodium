@@ -23,9 +23,10 @@ parentDir
 ```
 
 - To start, run `startCurrentVSCodiumForCora.sh` from your parentDir.
-- Go through the "setup" steps in VSCodium
+- Go through the "Get Started with VS Code" sections, or just choose your color theme and "Mark Done"
 - "Open Folder" `workspace/cora-react-client`
-- If asked and if you want to, confirm that you trust the authors, check the checkbox if you plan to only clone repos into workspace that you trust
+- If asked "Do you trust the authors of the files in this folder?" you can confirm if you want, check the checkbox if you plan to only clone repos into workspace that you trust
+- Open example.env and follow the notes there
 
 # NPM scripts
 
