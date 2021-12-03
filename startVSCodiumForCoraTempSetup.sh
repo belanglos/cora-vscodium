@@ -32,7 +32,6 @@ ${CONTAINERRUNTIME} run --rm -ti --privileged --ipc=host --env="QT_X11_NO_MITSHM
  -v /tmp/.X11-unix:/tmp/.X11-unix\
  -v INSTALLDIR/workspace:/home/$USER/workspace\
  -v INSTALLDIR/vscodium:/home/$USER/vscodium\
- -v PARENTDIR/m2:/home/$USER/.m2\
  -e user=$USER\
  -e vscodiumbranch=$VSCODIUMBRANCH\
  -e RECOMMENDEDSETUP=$RECOMMENDEDSETUP\
