@@ -20,7 +20,6 @@ createDirectories(){
   	mkdir $INSTALLDIR
  	mkdir $INSTALLDIR/vscodium
   	mkdir $INSTALLDIR/workspace
- 	mkdir $PARENTDIR/m2
 }
 	
 changeAndCopyScripts(){
