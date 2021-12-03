@@ -23,56 +23,57 @@ setUser(){
 }
 
 chooseRepo(){
-	echo ""
-	echo "Please choose the remote you want to use as origin or enter a different one, "
-	echo "where the cora projects have been cloned."
-	echo "1. https://github.com/lsu-ub-uu/"
-	echo "2. https://github.com/olovm/"
-	echo "3. https://github.com/maddekenn/"
-	echo "4. https://github.com/johandersson/"
-	echo "5. https://github.com/perebartrolisimo/"
-	echo "6. https://github.com/belanglos/"
-	echo "Choose 1, 2, 3, 4, 5, 6 or enter your own base url to clone as origin. (eg. https://github.com/olovm/)"
-	read -p "For origin, use? " userchoice
-	case "$userchoice" in
-	        1)
-				echo "You choose: $userchoice 1"
-	            originRepo="https://github.com/lsu-ub-uu/"
-	            otherRepos="olovm maddekenn johandersson perebartrolisimo belanglos"
-	            ;;
-	        2)
-				echo "You choose: $userchoice 2"
-	            originRepo="https://github.com/olovm/"
-	            otherRepos="lsu-ub-uu maddekenn johandersson perebartrolisimo belanglos"
-	            ;;
-	        3)
-				echo "You choose: $userchoice 3"
-	            originRepo="https://github.com/maddekenn/"
-	            otherRepos="lsu-ub-uu olovm johandersson perebartrolisimo belanglos"
-	            ;;
-	        4)
-				echo "You choose: $userchoice 4"
-	            originRepo="https://github.com/johandersson/"
-	            otherRepos="lsu-ub-uu olovm maddekenn perebartrolisimo belanglos"
-	            ;;
-	        5)
-				echo "You choose: $userchoice 5"
-	            originRepo="https://github.com/perebartrolisimo/"
-	            otherRepos="lsu-ub-uu olovm maddekenn johandersson belanglos"
-	            ;;
-			6)
-				echo "You choose: $userchoice 6"
-	            originRepo="https://github.com/belanglos/"
-	            otherRepos="lsu-ub-uu olovm maddekenn johandersson perebartrolisimo"
-	            ;;
-	        *)
-				echo "You choose: $userchoice other"
-	            originRepo="$userchoice"
-	            otherRepos="lsu-ub-uu olovm maddekenn johandersson perebartrolisimo"
-	esac
+	# echo ""
+	# echo "Please choose the remote you want to use as origin or enter a different one, "
+	# echo "where the cora projects have been cloned."
+	# echo "1. https://github.com/lsu-ub-uu/"
+	# echo "2. https://github.com/olovm/"
+	# echo "3. https://github.com/maddekenn/"
+	# echo "4. https://github.com/johandersson/"
+	# echo "5. https://github.com/perebartrolisimo/"
+	# echo "6. https://github.com/belanglos/"
+	# echo "Choose 1, 2, 3, 4, 5, 6 or enter your own base url to clone as origin. (eg. https://github.com/olovm/)"
+	# read -p "For origin, use? " userchoice
+	# case "$userchoice" in
+	#         1)
+	# 			echo "You choose: $userchoice 1"
+	#             originRepo="https://github.com/lsu-ub-uu/"
+	#             otherRepos="olovm maddekenn johandersson perebartrolisimo belanglos"
+	#             ;;
+	#         2)
+	# 			echo "You choose: $userchoice 2"
+	#             originRepo="https://github.com/olovm/"
+	#             otherRepos="lsu-ub-uu maddekenn johandersson perebartrolisimo belanglos"
+	#             ;;
+	#         3)
+	# 			echo "You choose: $userchoice 3"
+	#             originRepo="https://github.com/maddekenn/"
+	#             otherRepos="lsu-ub-uu olovm johandersson perebartrolisimo belanglos"
+	#             ;;
+	#         4)
+	# 			echo "You choose: $userchoice 4"
+	#             originRepo="https://github.com/johandersson/"
+	#             otherRepos="lsu-ub-uu olovm maddekenn perebartrolisimo belanglos"
+	#             ;;
+	#         5)
+	# 			echo "You choose: $userchoice 5"
+	#             originRepo="https://github.com/perebartrolisimo/"
+	#             otherRepos="lsu-ub-uu olovm maddekenn johandersson belanglos"
+	#             ;;
+	# 		6)
+	# 			echo "You choose: $userchoice 6"
+	#             originRepo="https://github.com/belanglos/"
+	#             otherRepos="lsu-ub-uu olovm maddekenn johandersson perebartrolisimo"
+	#             ;;
+	#         *)
+	# 			echo "You choose: $userchoice other"
+	#             originRepo="$userchoice"
+	#             otherRepos="lsu-ub-uu olovm maddekenn johandersson perebartrolisimo"
+	# esac
 	
+	originRepo="https://github.com/belanglos/"
 	echo "Origin choosen as: $originRepo"
-	echo "Others remotes will be: $otherRepos"
+	# echo "Others remotes will be: $otherRepos"
 }
 
 importProjectListing() {

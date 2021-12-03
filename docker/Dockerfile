@@ -29,7 +29,8 @@ RUN dnf clean all && \
     libXScrnSaver \    
     libsecret \        
     libwayland-server \
-    libxkbfile \       
+    libxkbfile \ 
+    fish \      
     mesa-libgbm -y &&\
     dnf clean all
 
