@@ -57,7 +57,7 @@ createGitConfigFile(){
 updateOrCreateEnv(){
 	local PARENT="$1"
 	local FILENAME=env.sh
-	local FILE=${PARENT}${FILENAME}
+	local FILE=${PARENT}/${FILENAME}
 	echo $FILE
 
 	if [ ! -f "${FILE}" ]; then
@@ -68,14 +68,14 @@ updateOrCreateEnv(){
 			echo "$FILE exists."
 			. $FILE
 			echo "Current version: $CURRENTVERSION, updating to $INSTALLVERSION"
-			sed -i "s/${CURRENTVERSION}/${INSTALLVERSION}/g" $FILE
+			sed -i "s/$CURRENTVERSION/$INSTALLVERSION/g" $FILE
 	fi
 }
 
 createStartScriptIfNotExists(){
     local PARENT="$1"
 	local FILENAME=startCurrentVSCodiumForCora.sh
-	local FILE=${PARENT}${FILENAME}
+	local FILE=${PARENT}/${FILENAME}
 
     if [ ! -f "${FILE}" ]; then
         echo "$FILENAME does not exist in $PARENT"
