@@ -5,7 +5,7 @@ RECOMMENDEDSETUP=${1:-false}
 SCRIPT=$(readlink -f "$0")
 BASEDIR=$(dirname $SCRIPT)
 PARENTDIR="$(dirname "$BASEDIR")"
-INSTALLVERSION=vscodium1_62_3forcora3
+INSTALLVERSION=vscodium1_62_3forcora4
 INSTALLDIR=$PARENTDIR/$INSTALLVERSION
 
 updateOrCreateEnv(){
@@ -14,7 +14,7 @@ updateOrCreateEnv(){
 	echo $FILE
 
 	if [ ! -f "${FILE}" ]; then
-			echo "$FILENAME does not exist in $PARENTDIR"
+			echo "$FILENAME does not exist in $PARENTDIR, attempting to create it."
 			touch "${FILE}"
 			echo "CURRENTVERSION=$INSTALLVERSION" > ${FILE}
 	else
@@ -30,7 +30,7 @@ createStartScriptIfNotExists(){
 	local FILE=${PARENTDIR}/${FILENAME}
 
     if [ ! -f "${FILE}" ]; then
-        echo "$FILENAME does not exist in $PARENTDIR"
+        echo "$FILENAME does not exist in $PARENTDIR, attempting to create it."
         cp $BASEDIR/$FILENAME $PARENTDIR/
         chmod +x ${FILE}
 	fi

@@ -18,7 +18,7 @@ firstRun(){
 	chmod +x ~/workspace/cora-vscodium/development/setupProjects.sh
 	~/workspace/cora-vscodium/development/setupProjects.sh ~/workspace
 	
-	cd ~/workspace/cora-react-client/
+	cd ~/workspace/diva-react-client/
 	npm cache clean --force
 	npm install
     

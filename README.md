@@ -17,7 +17,7 @@ After the steps above
 ```
 parentDir
 |- cora-vscodium/
-|- vscodium1_62_3forcora3/
+|- vscodium1_62_3forcora4/
 |- env.sh
 |- startCurrentVSCodiumForCora.sh
 ```
