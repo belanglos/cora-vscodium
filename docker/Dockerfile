@@ -34,6 +34,7 @@ RUN dnf clean all && \
     mesa-libgbm -y &&\
     dnf clean all
 
+RUN npm install npm@latest -g
 
 RUN mkdir /home/$user/vscodium
 RUN mkdir /home/$user/data
