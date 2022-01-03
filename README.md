@@ -51,4 +51,4 @@ The access token only has to have public_repo access.
 # To update to a new version
 1. cd into the parentDir
 2. Have your dockerId ready, to get it run `getent group docker`
-3. run `./cora-vscodium/runAll.sh <your-docker-id>`, replace `<your-docker-id>` with your docker id.
+3. run `./cora-vscodium/runAll.sh <your-docker-id> false master nocache`, replace `<your-docker-id>` with your docker id.
