@@ -17,9 +17,9 @@ After the steps above
 ```
 parentDir
 |- cora-vscodium/
-|- vscodium1_62_3forcora5/
 |- env.sh
 |- startCurrentVSCodiumForCora.sh
+|- vscodium1_62_3forcora5/
 ```
 #
 1. To start, run `./startCurrentVSCodiumForCora.sh` from your parentDir.
@@ -31,7 +31,7 @@ parentDir
 
 # To be able to push to Github
 
-into your parentFolder, put a .gitconfig file with content:
+into your parentDir, put a .gitconfig file with content:
 
 ```
 [credential]
@@ -47,6 +47,17 @@ https://[yourgithubusername]:[youraccesstoken]@github.com
 ```
         
 The access token only has to have public_repo access.
+
+Your parentDir should look like this now (ls -ahl):
+```
+parentDir
+|- cora-vscodium/
+|- vscodium1_62_3forcora5/
+|- env.sh
+|- .gitconfig
+|- .git-credentials
+|- startCurrentVSCodiumForCora.sh
+```
 
 # To update to a new version
 1. cd into the parentDir
