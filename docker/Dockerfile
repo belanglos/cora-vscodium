@@ -35,6 +35,7 @@ RUN dnf clean all && \
     dnf clean all
 
 RUN npm install npm@latest -g
+RUN npm install npm-check-updates@latest -g
 
 RUN mkdir /home/$user/vscodium
 RUN mkdir /home/$user/data
