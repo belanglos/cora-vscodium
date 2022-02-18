@@ -17,9 +17,9 @@ After the steps above
 ```
 parentDir
 |- cora-vscodium/
-|- vscodium1_64_2forcora1/
 |- env.sh
 |- startCurrentVSCodiumForCora.sh
+|- vscodium1_64_2forcora1/
 ```
 #
 1. To start, run `./startCurrentVSCodiumForCora.sh` from your parentDir.
@@ -31,7 +31,7 @@ parentDir
 
 # To be able to push to Github
 
-into your parentFolder, put a .gitconfig file with content:
+into your parentDir, put a .gitconfig file with content:
 
 ```
 [credential]
@@ -48,7 +48,18 @@ https://[yourgithubusername]:[youraccesstoken]@github.com
         
 The access token only has to have public_repo access.
 
+Your parentDir should look like this now (ls -ahl):
+```
+parentDir
+|- cora-vscodium/
+|- vscodium1_62_3forcora5/
+|- env.sh
+|- .gitconfig
+|- .git-credentials
+|- startCurrentVSCodiumForCora.sh
+```
+
 # To update to a new version
 1. cd into the parentDir
 2. Have your dockerId ready, to get it run `getent group docker`
-3. run `./cora-vscodium/runAll.sh <your-docker-id>`, replace `<your-docker-id>` with your docker id.
+3. run `./cora-vscodium/runAll.sh <your-docker-id> false master nocache`, replace `<your-docker-id>` with your docker id.
