@@ -59,9 +59,13 @@ installExtensions(){
 	unzip -d /tmp/vscode-eslint /tmp/vscode-eslint.vsix
 	mv /tmp/vscode-eslint/extension ~/vscodium/vscodiumforcora/data/extensions/dbaeumer.vscode-eslint-2.2.0
 
-	wget -O /tmp/prettier-vscode.vsix https://github.com/prettier/prettier-vscode/releases/download/v9.0.0/prettier-vscode-9.0.0.vsix
+	wget -O /tmp/prettier-vscode.vsix https://github.com/prettier/prettier-vscode/releases/download/v9.2.0/prettier-vscode-9.2.0.vsix
 	unzip -d /tmp/prettier-vscode /tmp/prettier-vscode.vsix
-	mv /tmp/prettier-vscode/extension ~/vscodium/vscodiumforcora/data/extensions/esbenp.prettier-vscode-9.0.0
+	mv /tmp/prettier-vscode/extension ~/vscodium/vscodiumforcora/data/extensions/esbenp.prettier-vscode-9.2.0
+
+	wget -O /tmp/codetogether.vsix https://github.com/Genuitec/CodeTogether/releases/download/2022.1.2/codetogether-2022.1.2.vsix
+	unzip -d /tmp/codetogether /tmp/codetogether.vsix
+	mv /tmp/codetogether/extension ~/vscodium/vscodiumforcora/data/extensions/genuitecllc.codetogether-2022.1.2
 }
 
 if [ ! -d ~/workspace/cora-vscodium ]; then
