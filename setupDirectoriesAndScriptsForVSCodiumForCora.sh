@@ -47,6 +47,7 @@ changeAndCopyScripts(){
 
 createGitConfigFile(){
 	touch $PARENTDIR/.gitconfig
+	touch $PARENTDIR/.git-credentials
 }
 
 if [ ! -d $INSTALLDIR ]; then
