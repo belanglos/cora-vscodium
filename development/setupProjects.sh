@@ -71,7 +71,7 @@ chooseRepo(){
 	#             otherRepos="lsu-ub-uu olovm maddekenn johandersson perebartrolisimo"
 	# esac
 	
-	originRepo="https://github.com/belanglos/"
+	originRepo="https://github.com/lsu-ub-uu/"
 	echo "Origin choosen as: $originRepo"
 	# echo "Others remotes will be: $otherRepos"
 }
