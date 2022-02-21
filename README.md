@@ -19,7 +19,7 @@ parentDir
 |- cora-vscodium/
 |- env.sh
 |- startCurrentVSCodiumForCora.sh
-|- vscodium1_64_2forcora1/
+|- vscodium1_64_2forcora2/
 ```
 #
 1. To start, run `./startCurrentVSCodiumForCora.sh` from your parentDir.
