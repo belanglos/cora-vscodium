@@ -29,7 +29,9 @@ chooseRepo(){
 }
 
 importProjectListing() {
+	echo "Importing projectListing"
 	.  $BASEDIR/projectListing.sh
+	echo $ALL
 }
 
 preventGitAskingForUsernameAndPasswordIfRepoIsMissing() {
@@ -53,6 +55,7 @@ cloneRepoAndAddRemotes() {
 	echo " "
 	echo "..."
 	echo "checking that repository and project exists:"
+	echo $projectName
 	setWorkingRepositoryAndProjectNameAsTemp
 	echo "..."
 	echo " "
