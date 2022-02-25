@@ -18,8 +18,13 @@ firstRun(){
 	chmod +x ~/workspace/cora-vscodium/development/setupProjects.sh
 	~/workspace/cora-vscodium/development/setupProjects.sh ~/workspace
 	
-	cd ~/workspace/diva-react-client/
-	npm cache clean --force
+	cd ~/workspace/diva-react-client/diva-cora-ts-api-wrapper
+	npm install
+
+	cd ../diva-resource-fetcher
+	npm install
+
+	cd ../diva-react-client
 	npm install
     
 }
