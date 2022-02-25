@@ -5,7 +5,7 @@ echo "running entrypoint.sh..."
 echo "*** using cora-vscodium branch: $VSCODIUMBRANCH ***"
 
 firstRun(){
-	git clone https://github.com/belanglos/cora-vscodium.git ~/workspace/cora-vscodium
+	git clone https://github.com/lsu-ub-uu/cora-vscodium.git ~/workspace/cora-vscodium
 	if [ $VSCODIUMBRANCH != 'master' ]; then
 		echo "*** checking out cora-vscodium branch: $VSCODIUMBRANCH ***"
 		cd ~/workspace/cora-vscodium
