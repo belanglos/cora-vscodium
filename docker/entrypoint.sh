@@ -20,9 +20,11 @@ firstRun(){
 	
 	cd ~/workspace/diva-react-client/diva-cora-ts-api-wrapper
 	npm install
+	npm run build
 
 	cd ../diva-resource-fetcher
 	npm install
+	npm run build
 
 	cd ../diva-react-client
 	npm install
