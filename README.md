@@ -2,7 +2,7 @@
 
 - Create a folder which will contain the installations of cora-vscodium, e.g. `mkdir parentDir`
 - `cd parentDir`
-- Clone this repo, e.g. `git clone https://github.com/belanglos/cora-vscodium/`
+- Clone this repo, e.g. `git clone https://github.com/lsu-ub-uu/cora-vscodium/`
 - Make the main install script executable `chmod +x ./cora-vscodium/runAll.sh`
 
 
