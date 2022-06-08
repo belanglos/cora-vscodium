@@ -19,7 +19,7 @@ parentDir
 |- cora-vscodium/
 |- env.sh
 |- startCurrentVSCodiumForCora.sh
-|- vscodium1_64_2forcora4/
+|- vscodium1_67_2forcora1/
 ```
 #
 1. To start, run `./startCurrentVSCodiumForCora.sh` from your parentDir.
@@ -52,7 +52,7 @@ Your parentDir should look like this now (ls -ahl):
 ```
 parentDir
 |- cora-vscodium/
-|- vscodium1_62_3forcora5/
+|- vscodium1_67_2forcora1/
 |- env.sh
 |- .gitconfig
 |- .git-credentials
