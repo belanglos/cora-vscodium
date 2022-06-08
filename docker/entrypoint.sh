@@ -78,6 +78,10 @@ installExtensions(){
 	unzip -d /tmp/vscode-toggle-quotes /tmp/vscode-toggle-quotes.zip
 	mv /tmp/vscode-toggle-quotes/vscode-toggle-quotes-0.3.6 ~/vscodium/vscodiumforcora/data/extensions/
 
+	cd ~/vscodium/vscodiumforcora/data/extensions/
+	npm install
+	npm run vscode:prepublish
+
 }
 
 if [ ! -d ~/workspace/cora-vscodium ]; then
