@@ -90,5 +90,6 @@ At the time of writing, this results in 23 results in 7 files.
 3. If it's newer, copy the link to the correct tar.gz file and paste it into entrypoint.sh
 
 
+## Extensions
 
-
+Four extensions are automatically packaged within cora-vscodium. To update to a newer version, find the correct vsix or zip file on the extension's respective github page, and update the download link in `docker/entrypoint.sh
