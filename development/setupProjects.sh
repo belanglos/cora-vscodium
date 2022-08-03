@@ -25,7 +25,6 @@ setUser(){
 chooseRepo(){
 	originRepo="https://github.com/lsu-ub-uu/"
 	echo "Origin choosen as: $originRepo"
-	# echo "Others remotes will be: $otherRepos"
 }
 
 importProjectListing() {
